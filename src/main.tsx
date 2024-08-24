@@ -7,12 +7,14 @@ import Login from "./Login.tsx";
 import { QueryClient, QueryClientProvider } from "react-query";
 import App from "./App.tsx";
 import Products from "./Products.tsx";
+import { Toaster } from "react-hot-toast";
 
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
+      <Toaster position="top-right" />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LayOut />}>

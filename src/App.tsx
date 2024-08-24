@@ -23,6 +23,7 @@ function App() {
 
   return (
     <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10 p-3 px-3 md:p-5 w-[100%] md:px-10 sm:grid-cols-2">
+     
       <div className="left border-2 border-slate-800 shadow-lg min-h-[600px] h-auto w-full rounded-lg overflow-y-auto">
         <p className="text-center font-bold text-slate-900 text-4xl">Add product</p>
         <div className="mt-5 md:px-10 px-4">

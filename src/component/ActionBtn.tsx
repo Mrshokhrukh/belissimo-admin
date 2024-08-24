@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast } from "react-toastify";
 
 type Props = {
   color: string;
@@ -9,20 +10,20 @@ type Props = {
 
 const ActionBtn = ({ color, text, id, auth }: Props) => {
   const clicked = async (text: any) => {
-    if (text == "Delete") {
+    if (text == "delete") {
       const res = await axios.delete(`https://bellissimo-avt2.onrender.com/delete_product/${id}`, {
         headers: {
           token: `${auth}`,
         },
       });
-      console.log(res);
+      toast.success(res.data.message);
     }
   };
   return (
     <div
-      className={`border border-collapse rounded bg-${color}-200 
-                  border-${color}-400 px-4 py-1 text-sm font-semibold text-${color}-700 flex items-center justify-center
-                 hover:bg-${color}-300 capitalize`}
+      className={`border border-collapse rounded-md bg-white 
+                  border-blue-400 px-4 py-1 text-sm font-semibold text-${color}-700 flex items-center justify-center
+                 hover:bg-gray-900 hover:text-white transition-all duration-200 capitalize`}
       onClick={() => clicked(text)}
     >
       {text}
