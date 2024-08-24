@@ -1,5 +1,7 @@
 import axios from "axios";
+import { useContext } from "react";
 import { toast } from "react-toastify";
+import { MainContext } from "../hook/MainContext";
 
 type Props = {
   color: string;
@@ -9,6 +11,8 @@ type Props = {
 };
 
 const ActionBtn = ({ color, text, id, auth }: Props) => {
+  const { setEditModalOpen } = useContext(MainContext);
+
   const clicked = async (text: any) => {
     if (text == "delete") {
       const res = await axios.delete(`https://bellissimo-avt2.onrender.com/delete_product/${id}`, {
@@ -17,6 +21,8 @@ const ActionBtn = ({ color, text, id, auth }: Props) => {
         },
       });
       toast.success(res.data.message);
+    } else if (text == "edit") {
+      setEditModalOpen(true);
     }
   };
   return (

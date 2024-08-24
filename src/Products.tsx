@@ -59,7 +59,7 @@ const Products = ({}: Props) => {
               <div
                 key={i}
                 id="admin-products"
-                className="relative w-[100%] h-[250px] transition-all duration-300 p-3 py-3.5 px-2 pr-6 flex flex-col justify-between items-center bg-white shadow-lg rounded-2xl cursor-pointer"
+                className="relative hover:border border-orange-400 w-[100%] h-[250px] p-3 py-3.5 px-2 pr-6 flex flex-col justify-between items-center bg-white shadow-lg rounded-2xl cursor-pointer"
               >
                 <div className="flex justify-center items-center flex-col">
                   <img src={product?.image} alt="" className="w-[55%]" />
@@ -70,7 +70,7 @@ const Products = ({}: Props) => {
                   </div>
                   <div
                     id="product-action"
-                    className={`bg-slate-200 mt-3 grid-cols-3 gap-2 hidden absolute top-[95%] w-[100%] h-[auto] shadow-2xl z-10 p-3 
+                    className={`w-[100%] bg-slate-200 border border-orange-400 border-t-0 mt-3 grid-cols-3 gap-2 hidden absolute top-[95%] h-[auto] shadow-2xl z-10 p-3 
                     rounded-xl transition-all duration-200`}
                   >
                     {/* <div className="col-span-3"></div> */}
