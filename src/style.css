@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#admin-products:hover {
+  height: auto;
+}
+#admin-products #product-action {
+}
+#admin-products:hover #product-action {
+  width: 90%;
+  display: grid;
+}
