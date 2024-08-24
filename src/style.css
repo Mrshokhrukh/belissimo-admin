@@ -10,3 +10,18 @@
   width: 90%;
   display: grid;
 }
+
+#authmodal {
+  background: rgba(0, 0, 0, 0.384);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.8px);
+  -webkit-backdrop-filter: blur(11.8px);
+}
+
+#scrollbar::-webkit-scrollbar {
+  width: 3px;
+}
+#scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(139, 139, 139, 0.425);
+  border-radius: 25px;
+}

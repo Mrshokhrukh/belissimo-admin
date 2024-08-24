@@ -2,6 +2,7 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import ActionBtn from "./component/ActionBtn";
 import { useEffect, useState } from "react";
+import EditModal from "./component/EditModal";
 
 interface Props {}
 
@@ -85,6 +86,7 @@ const Products = ({}: Props) => {
         })}
       </div>
       {/* </div> */}
+      <EditModal />
     </div>
   );
 };
