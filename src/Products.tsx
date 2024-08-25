@@ -43,7 +43,7 @@ const Products = ({}: Props) => {
                 key={i}
                 className={`${
                   category == val ? "bg-slate-300 border-blue-300 border-2" : ""
-                } py-2 px-3 rounded-xl border border-slate-300 cursor-pointer
+                } py-2 px-3 rounded-xl border border-slate-400 cursor-pointer
               hover:bg-slate-200 font-semibold capitalize `}
                 onClick={() => setCategory(val.toLowerCase())}
               >
